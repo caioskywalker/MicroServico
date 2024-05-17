@@ -1,0 +1,11 @@
+
+docker run --name mongodb_ebac -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -d mongo:4.4.1
+
+docker exec -it mongodb_ebac bash
+mongo -u admin
+show databases
+use ebac
+db.createUser({user: "teste", pwd: "teste", roles : [{role: "readWrite", db: "ebac"}]});
+
+
+mongodb://admin:admin@127.0.0.1:27017/authSource=admin&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&directConnection=true&ssl=false
