@@ -24,10 +24,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import br.com.cfarias.vendas.online.errorhandling.ApiError;
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * @author rodrigo.pires
- *
- */
+
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
 @Slf4j

@@ -5,11 +5,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import br.com.cfarias.vendas.online.domain.Cliente;
 import br.com.cfarias.vendas.online.exception.EntityNotFoundException;
 import br.com.cfarias.vendas.online.repository.IClienteRepository;
 
+@Service
 public class BuscaCliente {
 	
 	private IClienteRepository clienteRepository;
